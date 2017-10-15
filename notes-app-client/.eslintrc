@@ -43,7 +43,7 @@
     "no-lone-blocks": 0,
     "jsx-quotes": 1,
     "react/display-name": [
-      1,
+      0,
       {
         "ignoreTranspilerName": false
       }
