@@ -47,11 +47,9 @@ export default class Login extends Component {
 
     try {
       await this.login(this.state.email, this.state.password);
-      this.props.userHasAuthenticated(true);
-      console.log(">>>>", this.props.userHasAuthenticated)
+      alert("Logged in");
     } catch (e) {
       alert(e);
-      this.setState({ isLoading: false });
     }
   }
   
