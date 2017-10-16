@@ -1,0 +1,19 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayNjeri/NoteTaking-App-front-end-AWS-.git"
+  },
+  "author": "Rachael Njeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayNjeri/NoteTaking-App-front-end-AWS-/issues"
+  },
+  "homepage": "https://github.com/RayNjeri/NoteTaking-App-front-end-AWS-#readme"
+}
