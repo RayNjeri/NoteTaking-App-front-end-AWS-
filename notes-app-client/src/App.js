@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, NavItem } from "react-bootstrap";
 import Routes from "./Routes";
 import RouteNavItem from "./components/RouteNavItem";
 import "./App.css";
@@ -34,8 +34,16 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <RouteNavItem href="/signup">Signup</RouteNavItem>
-              <RouteNavItem href="/login">Login</RouteNavItem>
+              {this.state.isAuthenticated ?
+                <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                : [
+                  <RouteNavItem key={1} href="/signup">
+                    Signup
+                    </RouteNavItem>,
+                    <RouteNavItem key={2} href="/login">
+                Login
+                    </RouteNavItem>
+                  ]}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
