@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import config from "../config"
-import { CognitoUserPool, AuthenticationDetails, CognitoUser} from "amazon-cognito-identity-js";
+import { CognitoUserPool, AuthenticationDetails, CognitoUser } from "amazon-cognito-identity-js";
+import LoaderButton from "../components/LoaderButton";
 import "./Login.css";
 
 export default class Login extends Component {
@@ -51,6 +52,7 @@ export default class Login extends Component {
       this.props.history.push("/");
     } catch (e) {
       alert(e);
+      this.setState({ isLoading: false });
     }
   }
   
@@ -75,14 +77,14 @@ export default class Login extends Component {
           type="password"
             />
         </FormGroup>
-        <Button
+        <LoaderButton
         block
         bsSize="large"
         disabled={!this.validateForm()}
         type="submit"
-        >
-        Login
-        </Button>
+        text="Login" 
+        loadingText="Logging in..."    
+        />
         </form>
         </div>
     );
