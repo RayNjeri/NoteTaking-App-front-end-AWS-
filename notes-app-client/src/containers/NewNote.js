@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
-import { invokeApig, s3Upload } from "../libs/awsLib";
+// import { invokeApig, s3Upload } from "../libs/awsLib";
 import config from "../config";
 import "./NewNote.css";
 
