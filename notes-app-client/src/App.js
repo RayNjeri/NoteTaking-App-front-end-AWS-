@@ -17,6 +17,10 @@ class App extends Component {
     this.setState({ isAuthenticated: authenticated });
   }
 
+  handleLogout = event => {
+    this.userHasAuthenticated(false);
+  }
+
   render() {
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
