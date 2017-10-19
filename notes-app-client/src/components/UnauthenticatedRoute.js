@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+const querystring = require('querystring');
 
 export default ({ component: C, props: cProps, ...rest }) => {
   const redirect = querystring("redirect");
